@@ -18,7 +18,8 @@ namespace Todo
         public static AppBuilder BuildAvaloniaApp()
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
-                .LogToDebug();
+                .LogToDebug()
+                .UseReactiveUI();
 
         // Your application's entry point. Here you can initialize your MVVM framework, DI
         // container, etc.
