@@ -1,10 +1,5 @@
-﻿using System;
-using Avalonia;
-using Avalonia.Logging.Serilog;
+﻿using Avalonia;
 using Avalonia.ReactiveUI;
-using Todo.Services;
-using Todo.ViewModels;
-using Todo.Views;
 
 namespace Todo
 {
@@ -20,7 +15,7 @@ namespace Todo
         public static AppBuilder BuildAvaloniaApp()
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
-                .LogToDebug()
+                .LogToTrace()
                 .UseReactiveUI();
     }
 }
