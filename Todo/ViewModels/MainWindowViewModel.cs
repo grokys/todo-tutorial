@@ -1,4 +1,6 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
+using System.Text;
 using System.Reactive.Linq;
 using ReactiveUI;
 using Todo.Models;
@@ -6,7 +8,7 @@ using Todo.Services;
 
 namespace Todo.ViewModels
 {
-    class MainWindowViewModel : ViewModelBase
+    public class MainWindowViewModel : ViewModelBase
     {
         ViewModelBase content;
 
@@ -27,7 +29,7 @@ namespace Todo.ViewModels
         {
             var vm = new AddItemViewModel();
 
-            Observable.Merge(
+            _ = Observable.Merge(
                 vm.Ok,
                 vm.Cancel.Select(_ => (TodoItem)null))
                 .Take(1)

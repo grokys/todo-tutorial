@@ -1,10 +1,15 @@
-﻿using System.Reactive;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Reactive;
 using ReactiveUI;
 using Todo.Models;
 
 namespace Todo.ViewModels
 {
-    class AddItemViewModel : ViewModelBase
+    public class AddItemViewModel : ViewModelBase
     {
         string description;
 
@@ -15,8 +20,9 @@ namespace Todo.ViewModels
                 x => !string.IsNullOrWhiteSpace(x));
 
             Ok = ReactiveCommand.Create(
-                () => new TodoItem { Description = Description }, 
+                () => new TodoItem { Description = Description },
                 okEnabled);
+
             Cancel = ReactiveCommand.Create(() => { });
         }
 
