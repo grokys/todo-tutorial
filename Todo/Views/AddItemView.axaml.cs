@@ -1,14 +1,14 @@
-﻿using Avalonia;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
 namespace Todo.Views
 {
-    public class TodoListView : UserControl
+    public partial class AddItemView : UserControl
     {
-        public TodoListView()
+        public AddItemView()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         private void InitializeComponent()

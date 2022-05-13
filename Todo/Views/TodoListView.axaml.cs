@@ -1,17 +1,14 @@
-﻿using Avalonia;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
 namespace Todo.Views
 {
-    public class MainWindow : Window
+    public partial class TodoListView : UserControl
     {
-        public MainWindow()
+        public TodoListView()
         {
             InitializeComponent();
-#if DEBUG
-            this.AttachDevTools();
-#endif
         }
 
         private void InitializeComponent()
